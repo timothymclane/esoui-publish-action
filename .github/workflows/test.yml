@@ -23,6 +23,6 @@ jobs:
         with:
           addonId: ${{ secrets.ADDON_ID }}
           token: ${{ secrets.ESOUI_TOKEN }}
-          filePath: $GITHUB_WORKSPACE/testfile.zip
+          filePath: ./testfile.zip
           version: '3.14159'
           apiVersions: '6.1.5'
