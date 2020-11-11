@@ -1,0 +1,6 @@
+{
+    "prettier.packageManager": "yarn",
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "prettier.enable": false
+}

@@ -1,11 +1,22 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Publish to ESOUI'
+description: 'Publishes a package to ESOUI'
+author: 'Timothy McLane'
 inputs:
-  milliseconds: # change this
+  addonId:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: "Your addon's ID on ESOUI"
+  token:
+    required: true
+    description: 'Your ESOUI authentication token'
+  filePath:
+    required: true
+    description: 'Full path to the addon package for publish'
+  version:
+    required: true
+    description: 'Addon version'
+  apiVersions:
+    required: true
+    description: 'Compatible API version(s) for addon'
 runs:
   using: 'node12'
   main: 'dist/index.js'
