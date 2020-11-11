@@ -3777,8 +3777,9 @@ const getConfig = () => ({
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            core.info('Starting request...');
             const config = getConfig();
-            yield request_promise_native_1.default({
+            const result = yield request_promise_native_1.default({
                 url: 'https://api.esoui.com/addons/updatetest',
                 method: 'POST',
                 headers: { 'x-api-token': config.token },
@@ -3789,6 +3790,8 @@ function run() {
                     version: config.version,
                 },
             });
+            core.info('Request complete');
+            core.info(result);
         }
         catch (error) {
             core.setFailed(error.message);

@@ -12,6 +12,7 @@ const getConfig = () => ({
 
 async function run(): Promise<void> {
   try {
+    core.info('Starting request...')
     const config = getConfig()
     const result = await request({
       url: 'https://api.esoui.com/addons/updatetest',
@@ -24,6 +25,7 @@ async function run(): Promise<void> {
         version: config.version,
       },
     })
+    core.info('Request complete')
     core.info(result)
   } catch (error) {
     core.setFailed(error.message)
