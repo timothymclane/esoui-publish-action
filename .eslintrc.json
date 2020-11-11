@@ -2,7 +2,13 @@
     "plugins": ["jest", "@typescript-eslint"],
     "extends": ["plugin:github/recommended", "plugin:prettier/recommended", "prettier/@typescript-eslint"],
     "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 9,
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+    },
     "rules": {
+      "no-console": "warn",
       "eslint-comments/no-use": "off",
       "import/no-namespace": "off",
       "no-unused-vars": "off",
@@ -14,7 +20,6 @@
       "@typescript-eslint/ban-ts-comment": "error",
       "camelcase": "off",
       "@typescript-eslint/consistent-type-assertions": "error",
-      "@typescript-eslint/explicit-function-return-type": ["error", {"allowExpressions": true}],
       "@typescript-eslint/func-call-spacing": ["error", "never"],
       "@typescript-eslint/no-array-constructor": "error",
       "@typescript-eslint/no-empty-interface": "error",
