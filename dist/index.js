@@ -3785,8 +3785,8 @@ function run() {
                 headers: { 'x-api-token': config.token },
                 formData: {
                     id: config.addonId,
-                    compatible: config.apiVersions,
-                    updateFile: fs_1.default.createReadStream(config.filePath),
+                    compatibility: config.apiVersions,
+                    updatefile: fs_1.default.createReadStream(config.filePath),
                     version: config.version,
                 },
             });
