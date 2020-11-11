@@ -20,8 +20,8 @@ async function run(): Promise<void> {
       headers: { 'x-api-token': config.token },
       formData: {
         id: config.addonId,
-        compatible: config.apiVersions,
-        updateFile: fs.createReadStream(config.filePath),
+        compatibility: config.apiVersions,
+        updatefile: fs.createReadStream(config.filePath),
         version: config.version,
       },
     })
