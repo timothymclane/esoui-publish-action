@@ -14,6 +14,11 @@ async function run(): Promise<void> {
   try {
     core.info('Starting request...')
     const config = getConfig()
+    const currentAddon = await request({
+      url: `https://api.esoui.com/addons/${config.addonId}.json`,
+    })
+    core.info('CurrentAddon:')
+    core.info(currentAddon)
     const result = await request({
       url: 'https://api.esoui.com/addons/updatetest',
       method: 'POST',
